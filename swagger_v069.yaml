@@ -2497,7 +2497,7 @@ paths:
   /updatePaymentMethod:
     post:
       operationId: updatePaymentMethod
-      description: "## Overview\n\nThis Service allows for the update/cancel of the payment method from the payment manager.\n* MandateReference would be same as the BillingAccountNumber\n* Update:\n  * \"Active\" should be sent as \"true\" in request\n* Cancel:\n  * \"Active\" should be sent as false in request\n* In case of success, MandateReference and Status as Success will be returned in response\n* In case of any error, like direct debit not found, Status will be returned with the error message.\n* If ‘Active’ = true then EffectiveDate is mandatory \n\n## Interface Traceability\n\n| InterfaceId  | Execution Flow              |   \n|---|---                                     |\n|6.5.28.c |Rebus Integration (Billing Account Management Service) -> CRM [HTTP JSON]|\n\n## Exception Handling\n\nError codes for exception scenarios\n\n|  Error Code |Description   | Type  |\n|---|---|---|\n|commonError-0001|\tInternal Error from VIP while communicating with Data Raptor or Apex|\tTechnical|\n|commonError-0002|\tUnable to find Specified Data from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex[AccountNumber is not present in CRM]|\tBusiness|\n|commonError-0003|\tMandatory Field Is Missing Or Empty Or Invalid from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty  Application  through Data Raptor or Apex [Active in PaymentMethod is Empty] |\tValidation|\n|commonError-0004|\tTimeout from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex.[Timeout by DataRaptor]|Technical|\n|commonError-0005|\tData Processing Error from VIP Internal/External/Thirdparty Application while commnicating with Internal/External/Thirdparty Application [AccountNumber is Invalid]|\tBusiness|\n|commonError-0006|\tNot able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application[DataRaptor call failed]|\tBusiness|\n"
+      description: "## Overview\n\nThis Service allows for the update/cancel of the payment method from the payment manager.\n* MandateReference would be same as the BillingAccountNumber\n* Update:\n  * \"Active\" should be sent as \"true\" in request\n* Cancel:\n  * \"Active\" should be sent as false in request\n* In case of success, MandateReference and Status as Success will be returned in response\n* In case of any error, like direct debit not found, Status will be returned with the error message.\n* If ‘Active’ = true then EffectiveDate and IBAN are mandatory else those are optional.\n\n## Interface Traceability\n\n| InterfaceId  | Execution Flow              |   \n|---|---                                     |\n|6.5.28.c |Rebus Integration (Billing Account Management Service) -> CRM [HTTP JSON]|\n\n## Exception Handling\n\nError codes for exception scenarios\n\n|  Error Code |Description   | Type  |\n|---|---|---|\n|commonError-0001|\tInternal Error from VIP while communicating with Data Raptor or Apex|\tTechnical|\n|commonError-0002|\tUnable to find Specified Data from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex[AccountNumber is not present in CRM]|\tBusiness|\n|commonError-0003|\tMandatory Field Is Missing Or Empty Or Invalid from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty  Application  through Data Raptor or Apex [Active in PaymentMethod is Empty] |\tValidation|\n|commonError-0004|\tTimeout from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex.[Timeout by DataRaptor]|Technical|\n|commonError-0005|\tData Processing Error from VIP Internal/External/Thirdparty Application while commnicating with Internal/External/Thirdparty Application [AccountNumber is Invalid]|\tBusiness|\n|commonError-0006|\tNot able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application[DataRaptor call failed]|\tBusiness|\n"
       consumes:
         - application/json
       produces:
@@ -2540,7 +2540,6 @@ paths:
                                   - BankAccountName
                                   - BankSortCode
                                   - BankAccountNumber
-                                  - IBAN
                                   - MethodType
                                 properties:
                                   Active:
@@ -2557,10 +2556,10 @@ paths:
                                     description: Bank Account Number
                                   IBAN:
                                     type: string
-                                    description: IBAN.
+                                    description: IBAN (If ‘Active’ = true then IBAN is mandatory)
                                   MethodType:
                                     type: string
-                                    description: Type of the payment method
+                                    description: Type of the Registered payment method
                                   CardHolderName:
                                     type: string
                                     description: Card Holder name
@@ -13958,6 +13957,11 @@ paths:
           description: Receipt though defined in interface still the design is not in place from Migration engine.
           x-examples:
             Scenario1: |2-
+
+
+
+
+
 
 
 
