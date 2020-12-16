@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
-  description: "The following APIs are being delivered as part of the CRM Capability for Three.\n\n### Change Log\n| Version | Date | Change Note |\n|---------|------|-------------|\n| 0.7.0 | 02/11/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`getSubscriberDetails`</li></ul><ul><li>`CreateBasket`</li></ul><ul>\n| 0.6.9 | 07/09/2020 | <ul><li>Updated for CD2 WP<ul><li>`createCase`</li></ul><ul><li>`updateCustomerOrder`</li></ul><ul><li>`Update_Customer_Order__e`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.6.8 | 26/08/2020 | <ul><li>Updated for Returns and Exchange Work Package CD2<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.6.7 | 25/08/2020 | <ul><li>Updated for E & J Port In Scenario<ul><li>`3DSNotificationIMEIToCRM`</li></ul>\n| 0.6.6 | 24/08/2020 | <ul><li>Updated for CD2 WP: Strategic Comms<ul><li>`getSubscriberDetails`</li></ul>\n| 0.6.5 | 21/08/2020 | <ul><li>Updated for Migration as per IDGB FIXID<ul><li>`getMDSCRM`</li></ul>\n| 0.6.4 | 14/08/2020 | <ul><li>Updated for E & J Port Out Scenario<ul><li>`updatePortStatus`</li></ul>\n| 0.6.3 | 15/07/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\t\n| 0.6.2 | 12/07/2020 | <ul><li>Updated for fix 109 and CD2 WP<ul><li>`updatePaymentMethod`</li></ul><ul><li>`updateLoanAccountStatus`</li></ul><ul><li>`getSubscriptionDetails`</li></ul><ul>\t\n| 0.6.1 | 10/07/2020 | <ul><li>Updated <ul><li>`applyPriceUpdate`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.6.0 | 30/06/2020 | <ul><li>Updated for IUF Defect #19924<ul><li>`processSuspensionAction`</li></ul>\n| 0.5.9 | 27/06/2020 | <ul><li>Updated for CD2 Platform Event Work Package<ul><li>`updateCustomerOrderPE`</li></ul>\n| 0.5.8 | 27/06/2020 | <ul><li>Updated for Defect 19812<ul><li>`getSubscriberDetails`</li></ul>\n| 0.5.7 | 26/06/2020 | <ul><li>Updated for TDA Consent Solution for CR421 and Defect 19861<ul><li>`getCustomerConsent`</li></ul>\n| 0.5.6 | 25/06/2020 | <ul><li>Updated for CR537 Migration<ul><li>`manageBasket`</li></ul>\n| 0.5.5 | 05/06/2020 | <ul><li>Updated for P1 INC254340<ul><li>`3DSNotificationIMEIToCRM`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.5.4 | 06/05/2020 | <ul><li>Updated for CD1<ul><li>`batchJobRequestAPI`</li></ul>\n| 0.5.3 | 01/05/2020 | <ul><li>Updated for CD1<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.5.2 | 20/04/2020 | <ul><li>Updated for Migration Defects<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul>\t\n| 0.5.1 | 19/04/2020 | <ul><li>Updated for CD1<ul><li>`createCustomerInteractions`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerSubscriptionsAndServices`</li></ul><ul>\n| 0.5.0 | 08/04/2020 | <ul><li>Added and Updated for CD1<ul><li>`processSuspensionAction`</li></ul><ul><li>`getCardToken`</li></ul><ul>\n| 0.4.9 | 04/10/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.8 | 09/01/2020 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.4.7 | 04/10/2019 | <ul><li>Updated<ul><li>`createAndSubmitOrder`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.6 | 28/08/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.4.5 | 07/08/2019 | <ul><li>Updated<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.4 | 06/08/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.3 | 12/07/2019 | <ul><li>Updated<ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.2 | 26/06/2019 | <ul><li>Updated<ul><li>`getCardToken`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul><li>`createReceiptReference`</li></ul><ul><li>`getSubscriptionAndServices`</li></ul><ul>\n| 0.4.1 | 24/05/2019 | <ul><li>Updated<ul><li>`notifyProblemStatusEvent`</li></ul><ul>\n| 0.4.0 | 16/05/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.3.9 | 10/05/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul>\n| 0.3.8 | 03/05/2019 | <ul><li>Updated<ul><li>`createCustomerInteractions`</li></ul><ul>\n| 0.3.7 | 30/04/2019 | <ul><li>Updated<ul><li>`getUserInfo`</li></ul><ul>\n| 0.3.6 | 15/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.3.5 | 11/04/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul><li>`customerRegistration`</li></ul>\n| 0.3.4 | 09/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getBasket`</li></ul>\n| 0.3.3 | 08/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`assetSwap`</li></ul><ul><li>`createChangeOrder`</li></ul><ul><li>`createCase`</li></ul>|\n| 0.3.2 | 04/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.3.1 | 03/04/2019 | <ul><li>Updated<ul><li>`createCase`</li></ul><ul><li>`createChangeOrder`</li></ul>|\n| 0.3.0 | 02/04/2019 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.2.9 | 01/04/2019 | <ul><li>Updated<ul><li>`createChangeOrder`</li></ul>|\n| 0.2.8 | 29/03/2019 | <ul><li>Updated Interfacenames & catalogue Ids as per IC1.57<ul><li>`createTerminateOrder`</li></ul><ul><li>`createNewOrder`</li></ul><ul><li>`getUpgradeEligibility`</li></ul><ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul>|\n| 0.2.7 | 28/03/2019 | <ul><li>Updated <ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.6 | 26/03/2019 | <ul><li>Updated <ul><li>`assetSwap`</li></ul> <ul><li>`createChangeOrder`</li></ul>|\n| 0.2.5 | 20/03/2019 | <ul><li>Updated <ul><li>`checkOutBasket`</li></ul> <ul><li>`getMDSCRM`</li></ul>|\n| 0.2.4 | 19/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`getSubscrptionDetails`</li></ul><ul><li>`getCustomerConsent`</li></ul><li>Removed<ul><li>`validateChargeEligibility`</li></ul>|\n| 0.2.3 | 18/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`updatePortStatus`</li></ul><ul><li>`getPACDetails`</li></ul>|\n| 0.2.2 | 17/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.1 | 13/03/2019 | <ul><li>Updated <ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.2.0 | 08/03/2019 | <ul><li>Updated <ul><li>`notifyTechnicalMigration`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.1.9 | 08/03/2019 | <ul><li>Updated <ul><li>`createCustomerDetails`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.1.8 | 07/03/2019 | <ul><li>Updated `getPACDetails`</ul></li> |\n| 0.1.7 | 07/03/2019 | <ul><li>Updated <ul><li>`getPACDetails`</li><li>`getSubscriberDetails`</li><li>`getSubscriptionDetails`</li></ul></li><li>Updated the Header/Payload structure for: <ul><li> `getCreditCheckStatus`</li><li>`getPACDetails`</li><li>`getUserInfo`</li><li>`syncRTAM`</li><li>`updateBulkCommStatus`</li><li>`updateDailyEnrollment`</li></ul> </li><li>Updated response body for:<ul><li> `checkOutBasket`</li><li>`createBasket`</li><li>`updateBasket`</li></ul></li></ul>|\n| 0.1.6 | 05/03/2019 | <ul><li>Updated `notifyTechnicalMigrationStatus` |\n| 0.1.5 | 04/03/2019 | <ul><li>Updated `getMDSCRM`</li><li>Updated `createCustomerDetails`</li><li>Added & referenced `Header` & `Error` models</li><li>Sorted Tags</li></ul> |\n| 0.1.4 | 02/03/2019 | Swagger 2.0 spec. validation updates. |\n| 0.1.3 | 01/03/2019 | TBC |\n\n### References\n- PSI Reference Data Sheet - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Data%20Model%2FReference%20Data&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6&View={6C51B75D-BC66-481D-B18B-A350159D586C).\n- Interface Cataloge - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Interface%20Catalogue&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6)"
-  version: 0.7.0
+  description: "The following APIs are being delivered as part of the CRM Capability for Three.\n\n### Change Log\n| Version | Date | Change Note |\n|---------|------|-------------|\n| 0.7.1 | 16/12/2020 | <ul><li>Updated for CD2 Defect #23593<ul><li>`getCardToken`</li></ul>\n| 0.7.0 | 02/11/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`getSubscriberDetails`</li></ul><ul><li>`CreateBasket`</li></ul><ul>\n| 0.6.9 | 07/09/2020 | <ul><li>Updated for CD2 WP<ul><li>`createCase`</li></ul><ul><li>`updateCustomerOrder`</li></ul><ul><li>`Update_Customer_Order__e`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.6.8 | 26/08/2020 | <ul><li>Updated for Returns and Exchange Work Package CD2<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.6.7 | 25/08/2020 | <ul><li>Updated for E & J Port In Scenario<ul><li>`3DSNotificationIMEIToCRM`</li></ul>\n| 0.6.6 | 24/08/2020 | <ul><li>Updated for CD2 WP: Strategic Comms<ul><li>`getSubscriberDetails`</li></ul>\n| 0.6.5 | 21/08/2020 | <ul><li>Updated for Migration as per IDGB FIXID<ul><li>`getMDSCRM`</li></ul>\n| 0.6.4 | 14/08/2020 | <ul><li>Updated for E & J Port Out Scenario<ul><li>`updatePortStatus`</li></ul>\n| 0.6.3 | 15/07/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\t\n| 0.6.2 | 12/07/2020 | <ul><li>Updated for fix 109 and CD2 WP<ul><li>`updatePaymentMethod`</li></ul><ul><li>`updateLoanAccountStatus`</li></ul><ul><li>`getSubscriptionDetails`</li></ul><ul>\t\n| 0.6.1 | 10/07/2020 | <ul><li>Updated <ul><li>`applyPriceUpdate`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.6.0 | 30/06/2020 | <ul><li>Updated for IUF Defect #19924<ul><li>`processSuspensionAction`</li></ul>\n| 0.5.9 | 27/06/2020 | <ul><li>Updated for CD2 Platform Event Work Package<ul><li>`updateCustomerOrderPE`</li></ul>\n| 0.5.8 | 27/06/2020 | <ul><li>Updated for Defect 19812<ul><li>`getSubscriberDetails`</li></ul>\n| 0.5.7 | 26/06/2020 | <ul><li>Updated for TDA Consent Solution for CR421 and Defect 19861<ul><li>`getCustomerConsent`</li></ul>\n| 0.5.6 | 25/06/2020 | <ul><li>Updated for CR537 Migration<ul><li>`manageBasket`</li></ul>\n| 0.5.5 | 05/06/2020 | <ul><li>Updated for P1 INC254340<ul><li>`3DSNotificationIMEIToCRM`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.5.4 | 06/05/2020 | <ul><li>Updated for CD1<ul><li>`batchJobRequestAPI`</li></ul>\n| 0.5.3 | 01/05/2020 | <ul><li>Updated for CD1<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.5.2 | 20/04/2020 | <ul><li>Updated for Migration Defects<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul>\t\n| 0.5.1 | 19/04/2020 | <ul><li>Updated for CD1<ul><li>`createCustomerInteractions`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerSubscriptionsAndServices`</li></ul><ul>\n| 0.5.0 | 08/04/2020 | <ul><li>Added and Updated for CD1<ul><li>`processSuspensionAction`</li></ul><ul><li>`getCardToken`</li></ul><ul>\n| 0.4.9 | 04/10/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.8 | 09/01/2020 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.4.7 | 04/10/2019 | <ul><li>Updated<ul><li>`createAndSubmitOrder`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.6 | 28/08/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.4.5 | 07/08/2019 | <ul><li>Updated<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.4 | 06/08/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.3 | 12/07/2019 | <ul><li>Updated<ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.2 | 26/06/2019 | <ul><li>Updated<ul><li>`getCardToken`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul><li>`createReceiptReference`</li></ul><ul><li>`getSubscriptionAndServices`</li></ul><ul>\n| 0.4.1 | 24/05/2019 | <ul><li>Updated<ul><li>`notifyProblemStatusEvent`</li></ul><ul>\n| 0.4.0 | 16/05/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.3.9 | 10/05/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul>\n| 0.3.8 | 03/05/2019 | <ul><li>Updated<ul><li>`createCustomerInteractions`</li></ul><ul>\n| 0.3.7 | 30/04/2019 | <ul><li>Updated<ul><li>`getUserInfo`</li></ul><ul>\n| 0.3.6 | 15/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.3.5 | 11/04/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul><li>`customerRegistration`</li></ul>\n| 0.3.4 | 09/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getBasket`</li></ul>\n| 0.3.3 | 08/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`assetSwap`</li></ul><ul><li>`createChangeOrder`</li></ul><ul><li>`createCase`</li></ul>|\n| 0.3.2 | 04/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.3.1 | 03/04/2019 | <ul><li>Updated<ul><li>`createCase`</li></ul><ul><li>`createChangeOrder`</li></ul>|\n| 0.3.0 | 02/04/2019 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.2.9 | 01/04/2019 | <ul><li>Updated<ul><li>`createChangeOrder`</li></ul>|\n| 0.2.8 | 29/03/2019 | <ul><li>Updated Interfacenames & catalogue Ids as per IC1.57<ul><li>`createTerminateOrder`</li></ul><ul><li>`createNewOrder`</li></ul><ul><li>`getUpgradeEligibility`</li></ul><ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul>|\n| 0.2.7 | 28/03/2019 | <ul><li>Updated <ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.6 | 26/03/2019 | <ul><li>Updated <ul><li>`assetSwap`</li></ul> <ul><li>`createChangeOrder`</li></ul>|\n| 0.2.5 | 20/03/2019 | <ul><li>Updated <ul><li>`checkOutBasket`</li></ul> <ul><li>`getMDSCRM`</li></ul>|\n| 0.2.4 | 19/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`getSubscrptionDetails`</li></ul><ul><li>`getCustomerConsent`</li></ul><li>Removed<ul><li>`validateChargeEligibility`</li></ul>|\n| 0.2.3 | 18/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`updatePortStatus`</li></ul><ul><li>`getPACDetails`</li></ul>|\n| 0.2.2 | 17/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.1 | 13/03/2019 | <ul><li>Updated <ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.2.0 | 08/03/2019 | <ul><li>Updated <ul><li>`notifyTechnicalMigration`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.1.9 | 08/03/2019 | <ul><li>Updated <ul><li>`createCustomerDetails`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.1.8 | 07/03/2019 | <ul><li>Updated `getPACDetails`</ul></li> |\n| 0.1.7 | 07/03/2019 | <ul><li>Updated <ul><li>`getPACDetails`</li><li>`getSubscriberDetails`</li><li>`getSubscriptionDetails`</li></ul></li><li>Updated the Header/Payload structure for: <ul><li> `getCreditCheckStatus`</li><li>`getPACDetails`</li><li>`getUserInfo`</li><li>`syncRTAM`</li><li>`updateBulkCommStatus`</li><li>`updateDailyEnrollment`</li></ul> </li><li>Updated response body for:<ul><li> `checkOutBasket`</li><li>`createBasket`</li><li>`updateBasket`</li></ul></li></ul>|\n| 0.1.6 | 05/03/2019 | <ul><li>Updated `notifyTechnicalMigrationStatus` |\n| 0.1.5 | 04/03/2019 | <ul><li>Updated `getMDSCRM`</li><li>Updated `createCustomerDetails`</li><li>Added & referenced `Header` & `Error` models</li><li>Sorted Tags</li></ul> |\n| 0.1.4 | 02/03/2019 | Swagger 2.0 spec. validation updates. |\n| 0.1.3 | 01/03/2019 | TBC |\n\n### References\n- PSI Reference Data Sheet - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Data%20Model%2FReference%20Data&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6&View={6C51B75D-BC66-481D-B18B-A350159D586C).\n- Interface Cataloge - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Interface%20Catalogue&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6)"
+  version: 0.7.1
   title: REBUS - Vlocity APIs
   contact:
     email: shamsanjaykumar.karwa@techmahindra.com
@@ -8863,7 +8863,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: "## Information\n1)\tActivityName Scnearios (Following are the different type of ActivityName’s to be passed for different scnearios): \n\ti) IVR Topup scenario – ActivityName = “Topup” \n\tii) OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Weekly AutoTopup” || “Date AutoTopup” || “Threshold AutoTopup” \n\tiii) OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Recurring Product AutoTopup”\n2)\tIf ActivityName is for OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber is mandatory\n3)\tIf ActivityName is for OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber and AssetID is mandatory to fetch specific Product information\n4) If ActivityName is Topup or any other scenario then MSISDN is mandatory\n5) Expired cards will not be fetched as part of response message.\n6) OTR will be generated as part of getCardToken API call.\n7) The Amount is send in response only for the requests, which have the AssetID along with SubscriptionNumber (for all other requests RI will get from OCS)\n\n# Scenarios\n1. Scenario1: Topup\n2. Scenario2: Recurring Product AutoTopup\n3. Scenario3: Weekly AutoTopup\n4. Scenario4: Threshold AutoTopup\n5. Scenario5: Date AutoTopup\n"
+          description: "## Information\n1)\tActivityName Scnearios (Following are the different type of ActivityName’s to be passed for different scnearios): \n\ti) IVR Topup scenario – ActivityName = “Topup” \n\tii) OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Weekly AutoTopup” || “Date AutoTopup” || “Threshold AutoTopup” \n\tiii) OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Recurring Product AutoTopup”\n2)\tIf ActivityName is for OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber is mandatory\n3)\tIf ActivityName is for OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber and AssetID is mandatory to fetch specific Product information\n4) If ActivityName is Topup or any other scenario then MSISDN is mandatory\n5) Expired cards will not be fetched as part of response message.\n6) OTR will be generated as part of getCardToken API call.\n7) The Amount is send in response only for the requests, which have the AssetID along with SubscriptionNumber (for all other requests RI will get from OCS)\n\n# Scenarios\nRequest Scenarios\n1. Scenario1: Topup\n2. Scenario2: Recurring Product AutoTopup\n3. Scenario3: Weekly AutoTopup\n4. Scenario4: Threshold AutoTopup\n5. Scenario5: Date AutoTopup\n\nResponse Scenarios\n1. Scenario1: Generic Scenario Response\n2. Scenario2: No Active Card Present\n3. Scenario3: Active card Present"
           required: true
           schema:
             type: object
@@ -9165,7 +9165,7 @@ paths:
                             type: string
                             description: Salutation for the Primary User
           examples:
-            All Scenarios: |-
+            Scenario1: |-
               {
                 "Header": {
                   "ActivityName": "getCardToken",
@@ -9248,6 +9248,104 @@ paths:
                   }
                 }
               }
+            Scenario2:
+              Header:
+                ActivityName: getCardToken
+                ActivityStatus: Active
+                ActivityStatusEnum: SUCCESS
+                CorrelationId: '001'
+                Destination: Rebus Integration
+                MessageId: 1585373441929
+                MessageType: RESPONSE
+                Source: CRM
+                TimeStamp: '1965-06-14T02:42:54.369Z'
+              Payload:
+                GetCardToken:
+                  Contact:
+                    Account:
+                      BillingAccount:
+                        AccountNumber: '4001963792'
+                        AutoTopUpConfig:
+                          Amount: 27
+                          ProductCode: OFF_TOPUPOFFER_27.5Pound
+                          ProductName: TopUp Offer 27.5Pound
+                      CustomerAccount:
+                        AccountNumber: '4001963792'
+                        Brand: Three
+                      Subscription:
+                        Asset:
+                          MSISDN: proident exercitation ea
+                        SubscriptionNumber: '1000007617'
+                    ContactUniqueNumber: '1960148'
+                    FirstName: Sivasankar
+                    LastName: Padwal
+                    UserEmail: 447303027319@getnada.com
+                    IsAgeVerified: false
+                    Salutation: Mr
+            Scenario3:
+              Header:
+                ActivityName: getCardToken
+                ActivityStatus: Active
+                ActivityStatusEnum: SUCCESS
+                CorrelationId: '001'
+                Destination: Rebus Integration
+                MessageId: 1585373441929
+                MessageType: RESPONSE
+                Source: CRM
+                TimeStamp: '1965-06-14T02:42:54.369Z'
+              Payload:
+                GetCardToken:
+                  Contact:
+                    Account:
+                      BillingAccount:
+                        AccountNumber: '4001963792'
+                        PaymentMethod:
+                          - Address:
+                              PostCode: SL6 1GG
+                              AddressLine1: 'Apartment 6, Marigold House'
+                              BuildingName: Star hose
+                              BuildingNumber: '105'
+                              Province: Berkshire
+                            CardHolderName: Novel Roy
+                            CardType: Visa Credit
+                            OnlineToken: 420350bbbbbgzwf6345
+                            RegisteredCardType: Adhoc
+                            ExpiryMonth: 11
+                            ExpiryYear: 2031
+                            MethodType: Direct Debit
+                            SchemeReferenceData: TESTSRD0001
+                          - Address:
+                              PostCode: SL6 1GG
+                              AddressLine1: 'Apartment 16, Marigold House'
+                              BuildingName: Star house
+                              BuildingNumber: '115'
+                              Province: Berkshire
+                            CardHolderName: Amit Roy
+                            CardType: Visa Credit
+                            OnlineToken: 420350bbbbbgzwf6345
+                            RegisteredCardType: Adhoc
+                            ExpiryMonth: 11
+                            ExpiryYear: 2031
+                            MethodType: Direct Debit
+                            SchemeReferenceData: TESTSRD0002
+                        AutoTopUpConfig:
+                          Amount: 27
+                          OTR: I0000215843
+                          ProductCode: OFF_TOPUPOFFER_27.5Pound
+                          ProductName: TopUp Offer 27.5Pound
+                      CustomerAccount:
+                        AccountNumber: '4001963792'
+                        Brand: Three
+                      Subscription:
+                        Asset:
+                          MSISDN: proident exercitation ea
+                        SubscriptionNumber: '1000007617'
+                    ContactUniqueNumber: '1960148'
+                    FirstName: Sivasankar
+                    LastName: Padwal
+                    UserEmail: 447303027319@getnada.com
+                    IsAgeVerified: false
+                    Salutation: Mr
         '500':
           description: ''
           schema:
@@ -13957,6 +14055,26 @@ paths:
           description: Receipt though defined in interface still the design is not in place from Migration engine.
           x-examples:
             Scenario1: |2-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
