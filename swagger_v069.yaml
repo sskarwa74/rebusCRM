@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
-  description: "The following APIs are being delivered as part of the CRM Capability for Three.\n\n### Change Log\n| Version | Date | Change Note |\n|---------|------|-------------|\n| 0.7.1 | 16/12/2020 | <ul><li>Updated for CD2 Defect #23593 for getCardToken and defect #23681 for updatePaymentMethod<ul><li>`getCardToken`</li></ul><ul><li>`updatePaymentMethod`</li></ul><ul>\n| 0.7.0 | 02/11/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`getSubscriberDetails`</li></ul><ul><li>`CreateBasket`</li></ul><ul>\n| 0.6.9 | 07/09/2020 | <ul><li>Updated for CD2 WP<ul><li>`createCase`</li></ul><ul><li>`updateCustomerOrder`</li></ul><ul><li>`Update_Customer_Order__e`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.6.8 | 26/08/2020 | <ul><li>Updated for Returns and Exchange Work Package CD2<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.6.7 | 25/08/2020 | <ul><li>Updated for E & J Port In Scenario<ul><li>`3DSNotificationIMEIToCRM`</li></ul>\n| 0.6.6 | 24/08/2020 | <ul><li>Updated for CD2 WP: Strategic Comms<ul><li>`getSubscriberDetails`</li></ul>\n| 0.6.5 | 21/08/2020 | <ul><li>Updated for Migration as per IDGB FIXID<ul><li>`getMDSCRM`</li></ul>\n| 0.6.4 | 14/08/2020 | <ul><li>Updated for E & J Port Out Scenario<ul><li>`updatePortStatus`</li></ul>\n| 0.6.3 | 15/07/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\t\n| 0.6.2 | 12/07/2020 | <ul><li>Updated for fix 109 and CD2 WP<ul><li>`updatePaymentMethod`</li></ul><ul><li>`updateLoanAccountStatus`</li></ul><ul><li>`getSubscriptionDetails`</li></ul><ul>\t\n| 0.6.1 | 10/07/2020 | <ul><li>Updated <ul><li>`applyPriceUpdate`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.6.0 | 30/06/2020 | <ul><li>Updated for IUF Defect #19924<ul><li>`processSuspensionAction`</li></ul>\n| 0.5.9 | 27/06/2020 | <ul><li>Updated for CD2 Platform Event Work Package<ul><li>`updateCustomerOrderPE`</li></ul>\n| 0.5.8 | 27/06/2020 | <ul><li>Updated for Defect 19812<ul><li>`getSubscriberDetails`</li></ul>\n| 0.5.7 | 26/06/2020 | <ul><li>Updated for TDA Consent Solution for CR421 and Defect 19861<ul><li>`getCustomerConsent`</li></ul>\n| 0.5.6 | 25/06/2020 | <ul><li>Updated for CR537 Migration<ul><li>`manageBasket`</li></ul>\n| 0.5.5 | 05/06/2020 | <ul><li>Updated for P1 INC254340<ul><li>`3DSNotificationIMEIToCRM`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.5.4 | 06/05/2020 | <ul><li>Updated for CD1<ul><li>`batchJobRequestAPI`</li></ul>\n| 0.5.3 | 01/05/2020 | <ul><li>Updated for CD1<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.5.2 | 20/04/2020 | <ul><li>Updated for Migration Defects<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul>\t\n| 0.5.1 | 19/04/2020 | <ul><li>Updated for CD1<ul><li>`createCustomerInteractions`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerSubscriptionsAndServices`</li></ul><ul>\n| 0.5.0 | 08/04/2020 | <ul><li>Added and Updated for CD1<ul><li>`processSuspensionAction`</li></ul><ul><li>`getCardToken`</li></ul><ul>\n| 0.4.9 | 04/10/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.8 | 09/01/2020 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.4.7 | 04/10/2019 | <ul><li>Updated<ul><li>`createAndSubmitOrder`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.6 | 28/08/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.4.5 | 07/08/2019 | <ul><li>Updated<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.4 | 06/08/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.3 | 12/07/2019 | <ul><li>Updated<ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.2 | 26/06/2019 | <ul><li>Updated<ul><li>`getCardToken`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul><li>`createReceiptReference`</li></ul><ul><li>`getSubscriptionAndServices`</li></ul><ul>\n| 0.4.1 | 24/05/2019 | <ul><li>Updated<ul><li>`notifyProblemStatusEvent`</li></ul><ul>\n| 0.4.0 | 16/05/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.3.9 | 10/05/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul>\n| 0.3.8 | 03/05/2019 | <ul><li>Updated<ul><li>`createCustomerInteractions`</li></ul><ul>\n| 0.3.7 | 30/04/2019 | <ul><li>Updated<ul><li>`getUserInfo`</li></ul><ul>\n| 0.3.6 | 15/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.3.5 | 11/04/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul><li>`customerRegistration`</li></ul>\n| 0.3.4 | 09/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getBasket`</li></ul>\n| 0.3.3 | 08/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`assetSwap`</li></ul><ul><li>`createChangeOrder`</li></ul><ul><li>`createCase`</li></ul>|\n| 0.3.2 | 04/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.3.1 | 03/04/2019 | <ul><li>Updated<ul><li>`createCase`</li></ul><ul><li>`createChangeOrder`</li></ul>|\n| 0.3.0 | 02/04/2019 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.2.9 | 01/04/2019 | <ul><li>Updated<ul><li>`createChangeOrder`</li></ul>|\n| 0.2.8 | 29/03/2019 | <ul><li>Updated Interfacenames & catalogue Ids as per IC1.57<ul><li>`createTerminateOrder`</li></ul><ul><li>`createNewOrder`</li></ul><ul><li>`getUpgradeEligibility`</li></ul><ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul>|\n| 0.2.7 | 28/03/2019 | <ul><li>Updated <ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.6 | 26/03/2019 | <ul><li>Updated <ul><li>`assetSwap`</li></ul> <ul><li>`createChangeOrder`</li></ul>|\n| 0.2.5 | 20/03/2019 | <ul><li>Updated <ul><li>`checkOutBasket`</li></ul> <ul><li>`getMDSCRM`</li></ul>|\n| 0.2.4 | 19/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`getSubscrptionDetails`</li></ul><ul><li>`getCustomerConsent`</li></ul><li>Removed<ul><li>`validateChargeEligibility`</li></ul>|\n| 0.2.3 | 18/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`updatePortStatus`</li></ul><ul><li>`getPACDetails`</li></ul>|\n| 0.2.2 | 17/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.1 | 13/03/2019 | <ul><li>Updated <ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.2.0 | 08/03/2019 | <ul><li>Updated <ul><li>`notifyTechnicalMigration`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.1.9 | 08/03/2019 | <ul><li>Updated <ul><li>`createCustomerDetails`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.1.8 | 07/03/2019 | <ul><li>Updated `getPACDetails`</ul></li> |\n| 0.1.7 | 07/03/2019 | <ul><li>Updated <ul><li>`getPACDetails`</li><li>`getSubscriberDetails`</li><li>`getSubscriptionDetails`</li></ul></li><li>Updated the Header/Payload structure for: <ul><li> `getCreditCheckStatus`</li><li>`getPACDetails`</li><li>`getUserInfo`</li><li>`syncRTAM`</li><li>`updateBulkCommStatus`</li><li>`updateDailyEnrollment`</li></ul> </li><li>Updated response body for:<ul><li> `checkOutBasket`</li><li>`createBasket`</li><li>`updateBasket`</li></ul></li></ul>|\n| 0.1.6 | 05/03/2019 | <ul><li>Updated `notifyTechnicalMigrationStatus` |\n| 0.1.5 | 04/03/2019 | <ul><li>Updated `getMDSCRM`</li><li>Updated `createCustomerDetails`</li><li>Added & referenced `Header` & `Error` models</li><li>Sorted Tags</li></ul> |\n| 0.1.4 | 02/03/2019 | Swagger 2.0 spec. validation updates. |\n| 0.1.3 | 01/03/2019 | TBC |\n\n### References\n- PSI Reference Data Sheet - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Data%20Model%2FReference%20Data&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6&View={6C51B75D-BC66-481D-B18B-A350159D586C).\n- Interface Cataloge - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Interface%20Catalogue&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6)"
-  version: 0.7.1
+  description: "The following APIs are being delivered as part of the CRM Capability for Three.\n\n### Change Log\n| Version | Date | Change Note |\n|---------|------|-------------|\n| 0.7.2 | 17/12/2020 | <ul><li>CR682a TA1 & TA2 changes for 3DSNotificationIMEIToCRM; updateBasket and createBasket updated for PortIn Samples<ul><li>`3DSNotificationIMEIToCRM`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`createBasket`</li></ul><ul>\n| 0.7.1 | 16/12/2020 | <ul><li>Updated for CD2 Defect #23593 for getCardToken and defect #23681 for updatePaymentMethod<ul><li>`getCardToken`</li></ul><ul><li>`updatePaymentMethod`</li></ul><ul>\n| 0.7.0 | 02/11/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`getSubscriberDetails`</li></ul><ul><li>`CreateBasket`</li></ul><ul>\n| 0.6.9 | 07/09/2020 | <ul><li>Updated for CD2 WP<ul><li>`createCase`</li></ul><ul><li>`updateCustomerOrder`</li></ul><ul><li>`Update_Customer_Order__e`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.6.8 | 26/08/2020 | <ul><li>Updated for Returns and Exchange Work Package CD2<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.6.7 | 25/08/2020 | <ul><li>Updated for E & J Port In Scenario<ul><li>`3DSNotificationIMEIToCRM`</li></ul>\n| 0.6.6 | 24/08/2020 | <ul><li>Updated for CD2 WP: Strategic Comms<ul><li>`getSubscriberDetails`</li></ul>\n| 0.6.5 | 21/08/2020 | <ul><li>Updated for Migration as per IDGB FIXID<ul><li>`getMDSCRM`</li></ul>\n| 0.6.4 | 14/08/2020 | <ul><li>Updated for E & J Port Out Scenario<ul><li>`updatePortStatus`</li></ul>\n| 0.6.3 | 15/07/2020 | <ul><li>Updated for CD2 WP for E & J<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`createCustomerDetails`</li></ul><ul>\t\n| 0.6.2 | 12/07/2020 | <ul><li>Updated for fix 109 and CD2 WP<ul><li>`updatePaymentMethod`</li></ul><ul><li>`updateLoanAccountStatus`</li></ul><ul><li>`getSubscriptionDetails`</li></ul><ul>\t\n| 0.6.1 | 10/07/2020 | <ul><li>Updated <ul><li>`applyPriceUpdate`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.6.0 | 30/06/2020 | <ul><li>Updated for IUF Defect #19924<ul><li>`processSuspensionAction`</li></ul>\n| 0.5.9 | 27/06/2020 | <ul><li>Updated for CD2 Platform Event Work Package<ul><li>`updateCustomerOrderPE`</li></ul>\n| 0.5.8 | 27/06/2020 | <ul><li>Updated for Defect 19812<ul><li>`getSubscriberDetails`</li></ul>\n| 0.5.7 | 26/06/2020 | <ul><li>Updated for TDA Consent Solution for CR421 and Defect 19861<ul><li>`getCustomerConsent`</li></ul>\n| 0.5.6 | 25/06/2020 | <ul><li>Updated for CR537 Migration<ul><li>`manageBasket`</li></ul>\n| 0.5.5 | 05/06/2020 | <ul><li>Updated for P1 INC254340<ul><li>`3DSNotificationIMEIToCRM`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.5.4 | 06/05/2020 | <ul><li>Updated for CD1<ul><li>`batchJobRequestAPI`</li></ul>\n| 0.5.3 | 01/05/2020 | <ul><li>Updated for CD1<ul><li>`updateReceiptTransaction`</li></ul>\n| 0.5.2 | 20/04/2020 | <ul><li>Updated for Migration Defects<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul>\t\n| 0.5.1 | 19/04/2020 | <ul><li>Updated for CD1<ul><li>`createCustomerInteractions`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerSubscriptionsAndServices`</li></ul><ul>\n| 0.5.0 | 08/04/2020 | <ul><li>Added and Updated for CD1<ul><li>`processSuspensionAction`</li></ul><ul><li>`getCardToken`</li></ul><ul>\n| 0.4.9 | 04/10/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.8 | 09/01/2020 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.4.7 | 04/10/2019 | <ul><li>Updated<ul><li>`createAndSubmitOrder`</li></ul><ul><li>`checkPendingOrders`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.6 | 28/08/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.4.5 | 07/08/2019 | <ul><li>Updated<ul><li>`updateReceiptTransaction`</li></ul><ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.4 | 06/08/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul>\n| 0.4.3 | 12/07/2019 | <ul><li>Updated<ul><li>`getCustomerProfile`</li></ul><ul>\n| 0.4.2 | 26/06/2019 | <ul><li>Updated<ul><li>`getCardToken`</li></ul><ul><li>`getCustomerProfile`</li></ul><ul><li>`createReceiptReference`</li></ul><ul><li>`getSubscriptionAndServices`</li></ul><ul>\n| 0.4.1 | 24/05/2019 | <ul><li>Updated<ul><li>`notifyProblemStatusEvent`</li></ul><ul>\n| 0.4.0 | 16/05/2019 | <ul><li>Updated<ul><li>`getMDSCRM`</li></ul><ul>\n| 0.3.9 | 10/05/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`getMDSCRM`</li></ul><ul><li>`checkOutBasket`</li></ul><ul>\n| 0.3.8 | 03/05/2019 | <ul><li>Updated<ul><li>`createCustomerInteractions`</li></ul><ul>\n| 0.3.7 | 30/04/2019 | <ul><li>Updated<ul><li>`getUserInfo`</li></ul><ul>\n| 0.3.6 | 15/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul>\n| 0.3.5 | 11/04/2019 | <ul><li>Updated<ul><li>`getSubscriberDetails`</li></ul><ul><li>`customerRegistration`</li></ul>\n| 0.3.4 | 09/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul><ul><li>`getBasket`</li></ul>\n| 0.3.3 | 08/04/2019 | <ul><li>Updated<ul><li>`createCustomerDetails`</li></ul><ul><li>`assetSwap`</li></ul><ul><li>`createChangeOrder`</li></ul><ul><li>`createCase`</li></ul>|\n| 0.3.2 | 04/04/2019 | <ul><li>Updated<ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.3.1 | 03/04/2019 | <ul><li>Updated<ul><li>`createCase`</li></ul><ul><li>`createChangeOrder`</li></ul>|\n| 0.3.0 | 02/04/2019 | <ul><li>Updated<ul><li>`updateCustomerOrder`</li></ul>|\n| 0.2.9 | 01/04/2019 | <ul><li>Updated<ul><li>`createChangeOrder`</li></ul>|\n| 0.2.8 | 29/03/2019 | <ul><li>Updated Interfacenames & catalogue Ids as per IC1.57<ul><li>`createTerminateOrder`</li></ul><ul><li>`createNewOrder`</li></ul><ul><li>`getUpgradeEligibility`</li></ul><ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul>|\n| 0.2.7 | 28/03/2019 | <ul><li>Updated <ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.6 | 26/03/2019 | <ul><li>Updated <ul><li>`assetSwap`</li></ul> <ul><li>`createChangeOrder`</li></ul>|\n| 0.2.5 | 20/03/2019 | <ul><li>Updated <ul><li>`checkOutBasket`</li></ul> <ul><li>`getMDSCRM`</li></ul>|\n| 0.2.4 | 19/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`getSubscrptionDetails`</li></ul><ul><li>`getCustomerConsent`</li></ul><li>Removed<ul><li>`validateChargeEligibility`</li></ul>|\n| 0.2.3 | 18/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`notifyDepoistReturnClearance`</li></ul><ul><li>`updatePortStatus`</li></ul><ul><li>`getPACDetails`</li></ul>|\n| 0.2.2 | 17/03/2019 | <ul><li>Updated <ul><li>`getSubscriberDetails`</li></ul><ul><li>`getSubscriptionDetails`</li></ul>|\n| 0.2.1 | 13/03/2019 | <ul><li>Updated <ul><li>`getMDSCRM`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.2.0 | 08/03/2019 | <ul><li>Updated <ul><li>`notifyTechnicalMigration`</li></ul><ul><li>`createCustomerDetails`</li></ul>|\n| 0.1.9 | 08/03/2019 | <ul><li>Updated <ul><li>`createCustomerDetails`</li></ul> <ul><li>`createBasket`</li></ul><ul><li>`updateBasket`</li></ul><ul><li>`checkOutBasket`</li></ul></li></ul>|\n| 0.1.8 | 07/03/2019 | <ul><li>Updated `getPACDetails`</ul></li> |\n| 0.1.7 | 07/03/2019 | <ul><li>Updated <ul><li>`getPACDetails`</li><li>`getSubscriberDetails`</li><li>`getSubscriptionDetails`</li></ul></li><li>Updated the Header/Payload structure for: <ul><li> `getCreditCheckStatus`</li><li>`getPACDetails`</li><li>`getUserInfo`</li><li>`syncRTAM`</li><li>`updateBulkCommStatus`</li><li>`updateDailyEnrollment`</li></ul> </li><li>Updated response body for:<ul><li> `checkOutBasket`</li><li>`createBasket`</li><li>`updateBasket`</li></ul></li></ul>|\n| 0.1.6 | 05/03/2019 | <ul><li>Updated `notifyTechnicalMigrationStatus` |\n| 0.1.5 | 04/03/2019 | <ul><li>Updated `getMDSCRM`</li><li>Updated `createCustomerDetails`</li><li>Added & referenced `Header` & `Error` models</li><li>Sorted Tags</li></ul> |\n| 0.1.4 | 02/03/2019 | Swagger 2.0 spec. validation updates. |\n| 0.1.3 | 01/03/2019 | TBC |\n\n### References\n- PSI Reference Data Sheet - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Data%20Model%2FReference%20Data&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6&View={6C51B75D-BC66-481D-B18B-A350159D586C).\n- Interface Cataloge - [Link](https://hutchison3g.sharepoint.com/sites/planningfuture/Supplier_Workstreams/Architecture/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fplanningfuture%2FSupplier_Workstreams%2FArchitecture%2FShared%20Documents%2FHigh%20Level%20Design%20%28HLD%29%20Artefacts%2FE2E%20Interface%20Catalogue&FolderCTID=0x012000BBA26D0BA62CB04285B9EBE447C8ABC6)"
+  version: 0.7.2
   title: REBUS - Vlocity APIs
   contact:
     email: shamsanjaykumar.karwa@techmahindra.com
@@ -2461,6 +2461,7 @@ paths:
       responses:
         '200':
           description: ''
+          examples: {}
         '500':
           description: ''
           schema:
@@ -2632,7 +2633,7 @@ paths:
                     BillingAccount:
                       AccountNumber: '4000119414'
                       PaymentMethod:
-                        Active: true
+                        Active: false
                         BankAccountName: Anil
                         BankAccountNumber: '12345677'
                         BankSortCode: '000004'
@@ -4196,6 +4197,7 @@ paths:
                       Status:
                         type: boolean
                         description: One Time Password
+          examples: {}
         '500':
           description: ''
           schema:
@@ -8687,7 +8689,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: "## Scenarios\n\nScenario1) Request with ActivityName 3DSNotificationIMEIToCRM\n\n1) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n2) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n3) For ScreenSize - API to provide the details.\n4) Service will make Subscription Start Date stamped with Header TimeStamp and \n5) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n6) Service will send the comms for first Device update against asset (example: Welcome comms etc).\n\t\n\t\nScenario2) Request with ActivityName ActivationNotificationToCRM\n\n1. All attributes in payload body for IMEI/Device will be ignored.\n2. Service will make Subscription Start Date stamped with Header TimeStamp and \n3. Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n4. Service will not send the comms (example: Welcome comms etc)..\n\nScenario3) Request with ActivityName 3DSNotificationIMEIToCRM (for E & J PortIn)\n1) Based on subscription chargetobill field, or paymentoption field or order type/subsubtype it will differentiate if PortIN information need to be provided or not.\n2) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n3) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n4) For ScreenSize - API to provide the details.\n5) Service will make Subscription Start Date stamped with Header TimeStamp and \n6) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’ but in this case already the Asset Status will be in Active State. \n7) Service will send the comms for first Device update against asset (example: Welcome comms etc) but there is seperate SendComms design inprogress for the Comms (Which may not reuse the existing Send Comms functionality).\n8) Additional PortIN information is being sent in response (add 700ms/Call on existing order load as per SFDC team and CFT Lead will raise the Jira Defect and get required approval from PSI team or solution will be changed latter based on SITB results)."
+          description: "## Scenarios\n\nScenario1) Request with ActivityName 3DSNotificationIMEIToCRM\n\n1) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n2) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n3) For ScreenSize - API to provide the details.\n4) Service will make Subscription Start Date stamped with Header TimeStamp and \n5) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n6) Service will send the comms for first Device update against asset (example: Welcome comms etc).\n\t\n\t\nScenario2) Request with ActivityName ActivationNotificationToCRM\n\n1. All attributes in payload body for IMEI/Device will be ignored.\n2. Service will make Subscription Start Date stamped with Header TimeStamp and \n3. Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n4. Service will not send the comms (example: Welcome comms etc)..\n\nScenario3) Request with ActivityName 3DSNotificationIMEIToCRM (for E & J PortIn)\n1) Based on subscription chargetobill field, or paymentoption field or order type/subsubtype it will differentiate if PortIN information need to be provided or not.\n2) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n3) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n4) For ScreenSize - API to provide the details.\n5) Service will make Subscription Start Date stamped with Header TimeStamp and \n6) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’ but in this case already the Asset Status will be in Active State. \n7) Service will send the comms for first Device update against asset (example: Welcome comms etc) but there is seperate SendComms design inprogress for the Comms (Which may not reuse the existing Send Comms functionality)."
           required: true
           schema:
             type: object
@@ -8829,41 +8831,11 @@ paths:
                 MessageType: RESPONSE
                 Source: CRM
                 TimeStamp: '2019-07-05T11:52:55.745Z'
-              Payload:
-                PortIn:
-                  AccountNumber: '3000119390'
-                  CurrentMSISDN: '447303024929'
-                  PacCode: XES012345
-                  PortInDate: '2020-08-14'
-                  PortInMSISDN: '447303024930'
-                  ExternalReferenceId: 8011w000002V88o
-                  SpId: 0011w00000eHZ62
           schema:
             type: object
             properties:
               Header:
                 $ref: '#/definitions/header'
-              Payload:
-                type: object
-                properties:
-                  PortIn:
-                    type: object
-                    properties:
-                      AccountNumber:
-                        type: string
-                      CurrentMSISDN:
-                        type: string
-                      PacCode:
-                        type: string
-                      PortInDate:
-                        type: string
-                        format: date
-                      PortInMSISDN:
-                        type: string
-                      ExternalReferenceId:
-                        type: string
-                      SpId:
-                        type: string
             required:
               - Header
         '500':
@@ -13141,88 +13113,123 @@ paths:
                   }
                 }
               }
-            Scenario2: |-
-              {
-                "Header": {
-                  "ActivityName": "updateBasket_JoinViaSprint",
-                  "ActivityStatus": "SUCCESS",
-                  "ActivityStatusEnum": "SUCCESS",
-                  "CorrelationId": "6737451298975497496",
-                  "Destination": "Migration",
-                  "MessageId": "6737451298975497496",
-                  "MessageType": "RESPONSE",
-                  "Source": "CRM",
-                  "TimeStamp": "1941-06-23T19:49:05.301Z"
-                },
-                "Payload": {
-                  "Order": {
-                    "OrderNumber": "00036730",
-                    "OrderProduct": [
-                      {
-                        "OrderLineNumber": "000110001",
-                        "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                        "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY",
-                        "SubProduct": [
-                          {
-                            "OrderLineNumber": "000120001",
-                            "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                            "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY"
-                          }
-                        ]
-                      },
-                      {
-                        "OrderLineNumber": "000121001",
-                        "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                        "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY",
-                        "SubProduct": [
-                          {
-                            "OrderLineNumber": "000120101",
-                            "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                            "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY"
-                          }
-                        ]
-                      },
-                      {
-                        "OrderLineNumber": "000120010",
-                        "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                        "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY",
-                        "SubProduct": [
-                          {
-                            "OrderLineNumber": "000120021",
-                            "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                            "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY"
-                          },
-                          {
-                            "OrderLineNumber": "000120011",
-                            "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                            "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY"
-                          }
-                        ]
-                      },
-                      {
-                        "OrderLineNumber": "000120001",
-                        "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                        "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY",
-                        "SubProduct": [
-                          {
-                            "OrderLineNumber": "000120002",
-                            "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                            "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY"
-                          },
-                          {
-                            "OrderLineNumber": "000120003",
-                            "AssetRefernceId": "a3790959-7826-42d1-86dc-0a112d6d785a",
-                            "ProductCode": "OFF_1GB_PAYG_BOOST_MONTHLY"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "Subscription": {
-                    "SubscriptionNumber": "45656767678"
-                  }
-                }
-              }
+            Scenario2:
+              Header:
+                ActivityName: updateBasket_JoinViaSprint
+                ActivityStatus: SUCCESS
+                ActivityStatusEnum: SUCCESS
+                CorrelationId: '6737451298975497496'
+                Destination: Migration
+                MessageId: '6737451298975497496'
+                MessageType: RESPONSE
+                Source: CRM
+                TimeStamp: '1941-06-23T19:49:05.301Z'
+              Payload:
+                Order:
+                  OrderNumber: '00036730'
+                  OrderProduct:
+                    - OrderLineNumber: '000110001'
+                      AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                      ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                      SubProduct:
+                        - OrderLineNumber: '000120001'
+                          AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                          ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                    - OrderLineNumber: '000121001'
+                      AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                      ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                      SubProduct:
+                        - OrderLineNumber: '000120101'
+                          AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                          ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                    - OrderLineNumber: '000120010'
+                      AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                      ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                      SubProduct:
+                        - OrderLineNumber: '000120021'
+                          AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                          ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                        - OrderLineNumber: '000120011'
+                          AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                          ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                    - OrderLineNumber: '000120001'
+                      AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                      ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                      SubProduct:
+                        - OrderLineNumber: '000120002'
+                          AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                          ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                        - OrderLineNumber: '000120003'
+                          AssetRefernceId: a3790959-7826-42d1-86dc-0a112d6d785a
+                          ProductCode: OFF_1GB_PAYG_BOOST_MONTHLY
+                Subscription:
+                  SubscriptionNumber: '45656767678'
+            Scenario3:
+              Payload:
+                Subscription:
+                  SubscriptionNumber: '1000115498'
+                Order:
+                  OrderNumber: '00144366'
+                  OrderProduct:
+                    - AssetRefernceId: 6102cd7b-0cb6-2c67-92f4-e5b406b35837
+                      OrderLineNumber: '0001371579'
+                      ProductCode: OFF_BUNDLE_30282
+                      SubProduct:
+                        - AssetRefernceId: 6102cd7b-0cb6-2c67-92f4-e5b406b35837
+                          OrderLineNumber: '0001371579'
+                          ProductCode: OFF_BUNDLE_30282
+                        - AssetRefernceId: 5732e655-9549-c701-b845-f652116f6041
+                          OrderLineNumber: '0001371580'
+                          ProductCode: OFF_SKU_13491
+                        - AssetRefernceId: 0fa36550-20a6-fbf6-d878-e590436fb0da
+                          OrderLineNumber: '0001371581'
+                          ProductCode: '13491'
+                        - AssetRefernceId: aeba5a0a-6293-50a7-a526-2ef199a823ba
+                          OrderLineNumber: '0001371582'
+                          ProductCode: OFF_PAYM_PLAN_24M_ULDATA
+                        - AssetRefernceId: c0e60c45-4dd1-bd78-d7ef-75227ed6cb37
+                          OrderLineNumber: '0001371583'
+                          ProductCode: CFS_MVOICE
+                        - AssetRefernceId: 51c0243d-8813-369c-ea0d-11a009c06946
+                          OrderLineNumber: '0001371584'
+                          ProductCode: MSISDN
+                        - AssetRefernceId: 41553b18-f9c0-bf2a-d1f0-49b023202bce
+                          OrderLineNumber: '0001371585'
+                          ProductCode: SUBSCRIBER
+                        - AssetRefernceId: 38203479-bf65-8e04-29fc-5b05973aef53
+                          OrderLineNumber: '0001371586'
+                          ProductCode: SIM
+                        - AssetRefernceId: 6b579530-32ff-0db9-88fa-f4b792c46f88
+                          OrderLineNumber: '0001371587'
+                          ProductCode: CFS_MNETWORK
+                        - AssetRefernceId: fec34e11-b6db-00b4-1316-64b80e2510a6
+                          OrderLineNumber: '0001371588'
+                          ProductCode: CFS_SMS
+                        - AssetRefernceId: 7fc29fa7-a530-60c1-fc73-ae91436b33de
+                          OrderLineNumber: '0001371589'
+                          ProductCode: CFS_ROAMING
+                        - AssetRefernceId: 0472449a-9ee8-fb29-3551-957c49d14c65
+                          OrderLineNumber: '0001371590'
+                          ProductCode: CFS_MDATA
+                        - AssetRefernceId: 3fa69f24-3c22-cb96-e288-377689f9ba48
+                          OrderLineNumber: '0001371591'
+                          ProductCode: CFS_MD_VOICE
+                        - AssetRefernceId: a30d5cbb-c077-8fad-177b-71291868b7dc
+                          OrderLineNumber: '0001371592'
+                          ProductCode: CFS_VOICEMAIL
+                    - AssetRefernceId: c41a8c80-60bf-92ce-1a35-88c59216b822
+                      OrderLineNumber: '0001371593'
+                      ProductCode: OFF_PORT_IN
+              Header:
+                ActivityName: updateBasket_JoinViaSprint
+                ActivityStatus: Active
+                ActivityStatusEnum: SUCCESS
+                CorrelationId: '6737451298975497496'
+                Destination: Migration
+                MessageId: '6737451298975497496'
+                MessageType: RESPONSE
+                Source: CRM
+                TimeStamp: '2020-12-10T05:14:17.921Z'
         '500':
           description: ''
           schema:
@@ -13355,85 +13362,55 @@ paths:
           x-examples:
             Scenario1:
               Header:
-                ActivityName: updateBasket
+                ActivityName: updateBasket_JoinViaSprint
                 CorrelationId: '6737451298975497496'
                 Destination: CRM
                 MessageId: '6737451298975497496'
                 MessageType: REQUEST
                 Source: Migration
-                TimeStamp: '2020-04-09T07:37:12.738Z'
+                TimeStamp: '2020-08-13T07:37:12.738Z'
               Payload:
                 Account:
-                  AccountNumber: '9190018011'
+                  AccountNumber: '4000121484'
                   Type: Consumer
-                EffectiveDate: '2020-04-07T14:24:27Z'
+                EffectiveDate: '2020-08-13T14:24:27Z'
                 OriginatingChannel: Indirect
-                SalesChannel: Indirect
+                SalesChannel: Web
                 OrderProduct:
-                  - ProductCode: OFF_CORETARIFFSIM321
+                  - ProductCode: OFF_PAYM_PLAN_24M_ULDATA
                     Attributes:
                       - Name: CH_INT_CALLS_ACTIVE
                         Value: 'TRUE'
+                      - Name: CH_PAYMENT_OPTION
+                        Value: Upfront
                     SubProduct:
                       - ProductCode: MSISDN
                         Attributes:
-                          - Name: CH_IMSI
-                            Value: '235940200416524'
                           - Name: CH_MSISDN
-                            Value: '447898108212'
-                        OrderLineNumber: '00010001'
-                      - ProductCode: SUBSCRIBER
-                        Attributes:
-                          - Name: CH_SUBACCOUNTTYPE
-                            Value: Consumer
-                          - Name: CH_ISID
-                            Value: '200302241'
-                          - Name: CH_SUBBAN
-                            Value: '9190017989'
-                          - Name: CH_SUBAC_ADULTSERVICES
-                            Value: 'FALSE'
-                          - Name: CH_IMEI
-                            Value: '303333333333333'
-                        OrderLineNumber: '00010002'
-                      - ProductCode: SIM
-                        Attributes:
-                          - Name: CH_SIM_IMSI
-                            Value: '235940200416524'
-                          - Name: CH_SIM_SERIAL
-                            Value: '8944200902701000024'
-                          - Name: CH_SIM_TYPE
-                            Value: eSIM
-                        OrderLineNumber: '00010003'
-                      - ProductCode: CFS_MNETWORK
-                        OrderLineNumber: '00010004'
-                      - ProductCode: CFS_MVOICE
-                        Attributes:
-                          - Name: CH_PREMIUM_CALLS
-                            Value: 'TRUE'
-                        OrderLineNumber: '00010005'
-                      - ProductCode: CFS_SMS
-                        OrderLineNumber: '00010006'
-                      - ProductCode: CFS_ROAMING
-                        Attributes:
-                          - Name: CH_ROAMING_LEVEL
-                            Value: 'N'
-                        OrderLineNumber: '00010007'
-                      - ProductCode: CFS_MDATA
-                        OrderLineNumber: 10008
-                      - ProductCode: CFS_MD_VOICE
-                        OrderLineNumber: 10009
-                      - ProductCode: CFS_VOICEMAIL
-                        OrderLineNumber: '00010010'
-                    OrderLineNumber: '00010001'
-                OrderNumber: '00036730'
+                            Value: '445678974321'
+                        OrderLineNumber: '0001371584'
+                    OrderLineNumber: '0001371582'
+                  - ProductCode: OFF_PORT_IN
+                    OrderLineNumber: '0001371593'
+                    Attributes:
+                      - Name: CH_CURRENT_MSISDN
+                        Value: '445678943444'
+                      - Name: CH_PAC_CODE
+                        Value: XED768742
+                      - Name: CH_PORTING_DATE
+                        Value: '2020-12-19'
+                      - Name: CH_PORTIN_MSISDN
+                        Value: '445678974321'
+                OrderNumber: '00144366'
                 Subscription:
-                  SubscriptionStartDate: '2019-11-28T06:03:00.000+0000'
-                  MSISDN: '345353465'
+                  SubscriptionStartDate: '2020-07-23T01:37:12.738Z'
+                  MSISDN: '445678943444'
                   Status: Preactive
-                  CurrentContractStartDate: '2017-04-20'
-                  CurrentContractEndDate: '2019-11-28T06:03:00.000+0000'
-                  Term: '12'
-                  Name: Test
+                  CurrentContractStartDate: '2019-07-23T01:37:12.738Z'
+                  CurrentContractEndDate: '2020-12-22T01:37:12.738Z'
+                  Term: '16'
+                  Name: Test Sub UpdateBasket 19 Aug
+                  GlobalSpendLimit: 56
             Scenario2:
               Header:
                 ActivityName: updateBasket_JoinViaSprint
@@ -13516,6 +13493,89 @@ paths:
                   Term: '12'
                   Name: Test
                   GlobalSpendLimit: 10
+            Scenario3:
+              Header:
+                ActivityName: updateBasket_JoinViaSprint
+                CorrelationId: '6737451298975497496'
+                Destination: CRM
+                MessageId: '6737451298975497496'
+                MessageType: REQUEST
+                Source: Migration
+                TimeStamp: '2020-04-09T07:37:12.738Z'
+              Payload:
+                Account:
+                  AccountNumber: '9190018011'
+                  Type: Consumer
+                EffectiveDate: '2020-04-07T14:24:27Z'
+                OriginatingChannel: Indirect
+                SalesChannel: Indirect
+                OrderProduct:
+                  - ProductCode: OFF_CORETARIFFSIM321
+                    Attributes:
+                      - Name: CH_INT_CALLS_ACTIVE
+                        Value: 'TRUE'
+                    SubProduct:
+                      - ProductCode: MSISDN
+                        Attributes:
+                          - Name: CH_IMSI
+                            Value: '235940200416524'
+                          - Name: CH_MSISDN
+                            Value: '447898108212'
+                        OrderLineNumber: '00010001'
+                      - ProductCode: SUBSCRIBER
+                        Attributes:
+                          - Name: CH_SUBACCOUNTTYPE
+                            Value: Consumer
+                          - Name: CH_ISID
+                            Value: '200302241'
+                          - Name: CH_SUBBAN
+                            Value: '9190017989'
+                          - Name: CH_SUBAC_ADULTSERVICES
+                            Value: 'FALSE'
+                          - Name: CH_IMEI
+                            Value: '303333333333333'
+                        OrderLineNumber: '00010002'
+                      - ProductCode: SIM
+                        Attributes:
+                          - Name: CH_SIM_IMSI
+                            Value: '235940200416524'
+                          - Name: CH_SIM_SERIAL
+                            Value: '8944200902701000024'
+                          - Name: CH_SIM_TYPE
+                            Value: eSIM
+                        OrderLineNumber: '00010003'
+                      - ProductCode: CFS_MNETWORK
+                        OrderLineNumber: '00010004'
+                      - ProductCode: CFS_MVOICE
+                        Attributes:
+                          - Name: CH_PREMIUM_CALLS
+                            Value: 'TRUE'
+                        OrderLineNumber: '00010005'
+                      - ProductCode: CFS_SMS
+                        OrderLineNumber: '00010006'
+                      - ProductCode: CFS_ROAMING
+                        Attributes:
+                          - Name: CH_ROAMING_LEVEL
+                            Value: 'N'
+                        OrderLineNumber: '00010007'
+                      - ProductCode: CFS_MDATA
+                        OrderLineNumber: 10008
+                      - ProductCode: CFS_MD_VOICE
+                        OrderLineNumber: 10009
+                      - ProductCode: CFS_VOICEMAIL
+                        OrderLineNumber: '00010010'
+                    OrderLineNumber: '00010001'
+                OrderNumber: '00036730'
+                Subscription:
+                  SubscriptionStartDate: '2019-11-28T06:03:00.000+0000'
+                  MSISDN: '345353465'
+                  Status: Preactive
+                  CurrentContractStartDate: '2017-04-20'
+                  CurrentContractEndDate: '2019-11-28T06:03:00.000+0000'
+                  Term: '12'
+                  Name: Test
+                  GlobalSpendLimit: 10
+          description: ''
         - in: header
           name: Authorization
           type: string
@@ -13523,7 +13583,7 @@ paths:
           pattern: Bearer <SessionId>
       security:
         - Bearer: []
-      description: "## Overview\n\nThis service will update order product line items attribute list\n\n## Interface Traceability \n\n| InterfaceId  |  Execution Flow             |   \n|---|---                                     |\n|9.6.1.6.3.a|Rebus Integration (Customer Information Management Service) -> CRM [HTTP REST]|\n\n## Scenarios\n1. Migration ActivityName -> updateBasket (prefixed by migration types OnDemand/Bulk optional)\n2. Join ActivityName -> updateBasket_JoinViaSprint (Always)\n\n## Exception Handling\n\nError codes for exception scenarios\n\n|  Error Code |Description   | Type  |\n|---|---|---|\n|commonError-0001|\tInternal Error from VIP while communicating with Data Raptor or Apex|\tTechnical|\n|commonError-0002|\tUnable to find Specified Data from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex[AccountId is not present in CRM]|\tBusiness|\n|commonError-0003|\tMandatory Field Is Missing Or Empty Or Invalid from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty  Application  through Data Raptor or Apex [SubscriptionId is Empty] |\tValidation|\n|commonError-0004|\tTimeout from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex.[Timeout by DataRaptor]|Technical|\n|commonError-0005|\tData Processing Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application [OrderId is Invalid]|\tBusiness|\n|commonError-0006|\tNot able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application[DataRaptor call failed]|\tBusiness|"
+      description: "## Overview\n\nThis service will update order product line items attribute list\n\n## Interface Traceability \n\n| InterfaceId  |  Execution Flow             |   \n|---|---                                     |\n|9.6.1.6.3.a|Rebus Integration (Customer Information Management Service) -> CRM [HTTP REST]|\n\n## Scenarios\nScenario1. Migration ActivityName -> updateBasket (prefixed by migration types OnDemand/Bulk optional)\nScenario2. Join ActivityName -> updateBasket_JoinViaSprint (Always)\nScenario3: For PortIn E & J updateBasket_JoinViaSprint is ActivityName and Attributes CH_CURRENT_MSISDN, CH_PAC_CODE, CH_PORTING_DATE, CH_PORTIN_MSISDN will be mandatory for “OFF_PORT_IN” Product in request\n\n## Exception Handling\n\nError codes for exception scenarios\n\n|  Error Code |Description   | Type  |\n|---|---|---|\n|commonError-0001|\tInternal Error from VIP while communicating with Data Raptor or Apex|\tTechnical|\n|commonError-0002|\tUnable to find Specified Data from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex[AccountId is not present in CRM]|\tBusiness|\n|commonError-0003|\tMandatory Field Is Missing Or Empty Or Invalid from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty  Application  through Data Raptor or Apex [SubscriptionId is Empty] |\tValidation|\n|commonError-0004|\tTimeout from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex.[Timeout by DataRaptor]|Technical|\n|commonError-0005|\tData Processing Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application [OrderId is Invalid]|\tBusiness|\n|commonError-0006|\tNot able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application[DataRaptor call failed]|\tBusiness|"
       tags:
         - Basket
   /createCustomerDetails:
@@ -14176,6 +14236,61 @@ paths:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                {
                "Header": {
                   "ActivityName": "createCustomerDetails",
@@ -14510,6 +14625,97 @@ paths:
                           AssetRefernceId: d3db33b8-a9e3-fac3-7acd-6e9acef6771f
                           ProductCode: CFS_LUWIFI
                           ProductType: Service
+            scenario3:
+              Payload:
+                Order:
+                  OrderNumber: '00144366'
+                  OrderProduct:
+                    - AssetRefernceId: 6102cd7b-0cb6-2c67-92f4-e5b406b35837
+                      ExternalId: 6102cd7b-0cb6-2c67-92f4-e5b406b35837
+                      OrderLineNumber: '0001371579'
+                      ProductCode: OFF_BUNDLE_30282
+                      ProductType: Bundle
+                      SubProduct:
+                        - AssetRefernceId: 5732e655-9549-c701-b845-f652116f6041
+                          ExternalId: 5732e655-9549-c701-b845-f652116f6041
+                          OrderLineNumber: '0001371580'
+                          ProductCode: OFF_SKU_13491
+                          ProductType: Device
+                        - AssetRefernceId: 0fa36550-20a6-fbf6-d878-e590436fb0da
+                          ExternalId: 0fa36550-20a6-fbf6-d878-e590436fb0da
+                          OrderLineNumber: '0001371581'
+                          ProductCode: '13491'
+                          ProductType: Resource
+                        - AssetRefernceId: aeba5a0a-6293-50a7-a526-2ef199a823ba
+                          ExternalId: aeba5a0a-6293-50a7-a526-2ef199a823ba
+                          OrderLineNumber: '0001371582'
+                          ProductCode: OFF_PAYM_PLAN_24M_ULDATA
+                          ProductType: Plan
+                        - AssetRefernceId: c0e60c45-4dd1-bd78-d7ef-75227ed6cb37
+                          ExternalId: c0e60c45-4dd1-bd78-d7ef-75227ed6cb37
+                          OrderLineNumber: '0001371583'
+                          ProductCode: CFS_MVOICE
+                          ProductType: Service
+                        - AssetRefernceId: 51c0243d-8813-369c-ea0d-11a009c06946
+                          ExternalId: 51c0243d-8813-369c-ea0d-11a009c06946
+                          OrderLineNumber: '0001371584'
+                          ProductCode: MSISDN
+                          ProductType: Resource
+                        - AssetRefernceId: 41553b18-f9c0-bf2a-d1f0-49b023202bce
+                          ExternalId: 41553b18-f9c0-bf2a-d1f0-49b023202bce
+                          OrderLineNumber: '0001371585'
+                          ProductCode: SUBSCRIBER
+                          ProductType: Resource
+                        - AssetRefernceId: 38203479-bf65-8e04-29fc-5b05973aef53
+                          ExternalId: 38203479-bf65-8e04-29fc-5b05973aef53
+                          OrderLineNumber: '0001371586'
+                          ProductCode: SIM
+                          ProductType: Resource
+                        - AssetRefernceId: 6b579530-32ff-0db9-88fa-f4b792c46f88
+                          ExternalId: 6b579530-32ff-0db9-88fa-f4b792c46f88
+                          OrderLineNumber: '0001371587'
+                          ProductCode: CFS_MNETWORK
+                          ProductType: Service
+                        - AssetRefernceId: fec34e11-b6db-00b4-1316-64b80e2510a6
+                          ExternalId: fec34e11-b6db-00b4-1316-64b80e2510a6
+                          OrderLineNumber: '0001371588'
+                          ProductCode: CFS_SMS
+                          ProductType: Service
+                        - AssetRefernceId: 7fc29fa7-a530-60c1-fc73-ae91436b33de
+                          ExternalId: 7fc29fa7-a530-60c1-fc73-ae91436b33de
+                          OrderLineNumber: '0001371589'
+                          ProductCode: CFS_ROAMING
+                          ProductType: Service
+                        - AssetRefernceId: 0472449a-9ee8-fb29-3551-957c49d14c65
+                          ExternalId: 0472449a-9ee8-fb29-3551-957c49d14c65
+                          OrderLineNumber: '0001371590'
+                          ProductCode: CFS_MDATA
+                          ProductType: Service
+                        - AssetRefernceId: 3fa69f24-3c22-cb96-e288-377689f9ba48
+                          ExternalId: 3fa69f24-3c22-cb96-e288-377689f9ba48
+                          OrderLineNumber: '0001371591'
+                          ProductCode: CFS_MD_VOICE
+                          ProductType: Service
+                        - AssetRefernceId: a30d5cbb-c077-8fad-177b-71291868b7dc
+                          ExternalId: a30d5cbb-c077-8fad-177b-71291868b7dc
+                          OrderLineNumber: '0001371592'
+                          ProductCode: CFS_VOICEMAIL
+                          ProductType: Service
+                    - AssetRefernceId: c41a8c80-60bf-92ce-1a35-88c59216b822
+                      ExternalId: c41a8c80-60bf-92ce-1a35-88c59216b822
+                      OrderLineNumber: '0001371593'
+                      ProductCode: OFF_PORT_IN
+                      ProductType: Service
+              Header:
+                ActivityName: createBasket_JoinViaSprint
+                ActivityStatus: Active
+                ActivityStatusEnum: SUCCESS
+                CorrelationId: '51997174519775497976'
+                Destination: Rebus Integration
+                MessageId: '51997174519775497976'
+                MessageType: RESPONSE
+                Source: CRM
+                TimeStamp: '2020-12-10T05:06:06.577Z'
         '500':
           description: ''
           schema:
@@ -14686,7 +14892,33 @@ paths:
                         StartDate: '2020-03-30T09:36:16Z'
                         ExternalId: 49e321fc-ee83-4c78-8014-b93dd13dca95
                         IsMandatory: true
-      description: "## Overview\n\nThis service will create empty basket to add offers for migrated subscriber\n\n## Interface Traceability \n\n| InterfaceId  |  Execution Flow             |   \n|---|---                                     |\n|9.6.1.6.2.a|Rebus Integration (Customer Information Management Service) -> CRM [HTTP REST]|\n\n## Scenarios\n1. Migration ActivityName -> createBasket (prefixed by migration types OnDemand/Bulk optional)\n2. Join ActivityName -> createBasket_JoinViaSprint (Always) and MRC/NRC should be non-negative value and for EnJ it's not required. As the price updates for E & J service are being done through separate service created for price updates.\n3. TrackingNumber is required for Join journey\n\nNote: MRC/NRC are currently optional in Schema.\n\n## Exception Handling\n\nError codes for exception scenarios\n\n|  Error Code |Description   | Type  |\n|---|---|---|\n|commonError-0001|\tInternal Error from VIP while communicating with Data Raptor or Apex|\tTechnical|\n|commonError-0002|\tUnable to find Specified Data from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex[AccountId is not present in CRM]|\tBusiness|\n|commonError-0003|\tMandatory Field Is Missing Or Empty Or Invalid from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty  Application  through Data Raptor or Apex [SubscriptionId is Empty] |\tValidation|\n|commonError-0004|\tTimeout from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex.[Timeout by DataRaptor]|Technical|\n|commonError-0005|\tData Processing Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application [PlanCode is Invalid]|\tBusiness|\n|commonError-0006|\tNot able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application[DataRaptor call failed]|\tBusiness|\n\nOrderProduct and SubProduct are the instances of same objects definition and can go only two levels. Please refer CDM Product Offering and Associated Product Offering as a model refrence. \n\n1. For Bundles -> Bundle product is parent and all other products like PLAN/DEVICE/CFS/RESOURCES will be subproducts (Child) (CRM expects only the Bundle Product) \n2. For Plan -> Plan product is the parent and all other products like CFS/RESOURCES will be subproducts (Child) (CRM Expects only the Plan Product)\n3. For any independent products like \"Free Floating Addon\"/\"PortIn\"/\"Promotions\" etc (not nested in Bundle/Plan) then it should come at Product Level (Same Level as Bundle/Plan)"
+            Scenario3:
+              Header:
+                ActivityName: createBasket_JoinViaSprint
+                CorrelationId: '51997174519775497976'
+                Destination: CRM
+                MessageId: '51997174519775497976'
+                MessageType: REQUEST
+                Source: Rebus Integration
+                TimeStamp: '2020-10-27T00:00:00.000Z'
+              Payload:
+                TrackingNumber: 1234ABCE200IJKUY
+                DealerCode: SUS96
+                ExternalToken: Ext234
+                Account:
+                  AccountNumber: '4000121484'
+                  Type: Billing
+                EffectiveDate: '2020-10-27T00:00:00Z'
+                OriginatingChannel: Indirect
+                SalesChannel: Indirect
+                OrderProduct:
+                  - ProductCode: OFF_BUNDLE_30282
+                    StartDate: '2020-10-27T00:00:00Z'
+                    ExternalId: a3790979-7826-42d1-86dc-0a112d6d200P
+                  - ProductCode: OFF_PORT_IN
+                    ExternalId: a3790979-7826-42d1-86dc-0a112d6d200P
+          description: ''
+      description: "## Overview\n\nThis service will create empty basket to add offers for migrated subscriber\n\n## Interface Traceability \n\n| InterfaceId  |  Execution Flow             |   \n|---|---                                     |\n|9.6.1.6.2.a|Rebus Integration (Customer Information Management Service) -> CRM [HTTP REST]|\n\n## Scenarios\nScenario1. Migration ActivityName -> createBasket (prefixed by migration types OnDemand/Bulk optional)\nScenario2. Join ActivityName -> createBasket_JoinViaSprint (Always) and MRC/NRC should be non-negative value and for EnJ it's not required. As the price updates for E & J service are being done through separate service created for price updates. TrackingNumber is required for Join journey\nScenario3. PortIn Join ActivityName -> createBasket_JoinViaSprint (same for all E & J)\n\nNote: MRC/NRC are currently optional in Schema.\n\n## Exception Handling\n\nError codes for exception scenarios\n\n|  Error Code |Description   | Type  |\n|---|---|---|\n|commonError-0001|\tInternal Error from VIP while communicating with Data Raptor or Apex|\tTechnical|\n|commonError-0002|\tUnable to find Specified Data from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex[AccountId is not present in CRM]|\tBusiness|\n|commonError-0003|\tMandatory Field Is Missing Or Empty Or Invalid from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty  Application  through Data Raptor or Apex [SubscriptionId is Empty] |\tValidation|\n|commonError-0004|\tTimeout from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex.[Timeout by DataRaptor]|Technical|\n|commonError-0005|\tData Processing Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application [PlanCode is Invalid]|\tBusiness|\n|commonError-0006|\tNot able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application[DataRaptor call failed]|\tBusiness|\n\nOrderProduct and SubProduct are the instances of same objects definition and can go only two levels. Please refer CDM Product Offering and Associated Product Offering as a model refrence. \n\n1. For Bundles -> Bundle product is parent and all other products like PLAN/DEVICE/CFS/RESOURCES will be subproducts (Child) (CRM expects only the Bundle Product) \n2. For Plan -> Plan product is the parent and all other products like CFS/RESOURCES will be subproducts (Child) (CRM Expects only the Plan Product)\n3. For any independent products like \"Free Floating Addon\"/\"PortIn\"/\"Promotions\" etc (not nested in Bundle/Plan) then it should come at Product Level (Same Level as Bundle/Plan)\n\n"
       tags:
         - Basket
   /checkOutBasket:
@@ -14893,17 +15125,28 @@ paths:
               Header:
                 $ref: '#/definitions/header'
           examples:
-            application/json:
+            Scenario1:
               Header:
-                ActivityName: updatePortStatus
-                ActivityStatus: SUCCESS
-                ActivityStatusEnum: SUCCESS
-                CorrelationId: '12345678785348718'
-                Destination: RI
-                MessageId: '12345678785348718'
-                MessageType: RESPONSE
+                TimeStamp: '2020-12-17T07:15:54.929Z'
                 Source: CRM
-                TimeStamp: '2005-11-29T00:26:18.876Z'
+                MessageType: RESPONSE
+                MessageId: '12345678785348718'
+                Destination: RI
+                CorrelationId: '12345678785348718'
+                ActivityStatusEnum: SUCCESS
+                ActivityStatus: SUCCESS
+                ActivityName: updatePortStatus
+            Scenario2:
+              Header:
+                TimeStamp: '2020-12-17T07:15:54.929Z'
+                Source: CRM
+                MessageType: RESPONSE
+                MessageId: '12345678785348718'
+                Destination: RI
+                CorrelationId: '12345678785348718'
+                ActivityStatusEnum: SUCCESS
+                ActivityStatus: SUCCESS
+                ActivityName: updatePortStatus_JoinViaSprint
         '500':
           description: ''
           schema:
@@ -14917,22 +15160,38 @@ paths:
                   Error:
                     $ref: '#/definitions/error'
           examples:
-            application/json:
+            Scenario1:
               Header:
-                ActivityName: updatePortOutStatus
-                ActivityStatus: dolor quis
-                ActivityStatusEnum: id reprehenderit
-                CorrelationId: mollit anim sed
-                Destination: CRM
-                MessageId: nulla proident
-                MessageType: Error
-                Source: aliqua enim ut
-                TimeStamp: '1978-09-24T01:54:50.228Z'
+                TimeStamp: '2020-12-17T07:12:26.552Z'
+                Source: CRM
+                MessageType: RESPONSE
+                MessageId: '12345678785348718'
+                Destination: RI
+                CorrelationId: '12345678785348718'
+                ActivityStatusEnum: FAILURE
+                ActivityStatus: FAILURE
+                ActivityName: updatePortStatus
               Payload:
                 Error:
                   ErrorCode: commonError-0001
                   Message: Internal Error from VIP while communicating with Data Raptor or Apex
                   Type: Technical
+            Scenario2:
+              Header:
+                TimeStamp: '2020-12-17T07:12:26.552Z'
+                Source: CRM
+                MessageType: RESPONSE
+                MessageId: '12345678785348718'
+                Destination: RI
+                CorrelationId: '12345678785348718'
+                ActivityStatusEnum: FAILURE
+                ActivityStatus: FAILURE
+                ActivityName: updatePortStatus_JoinViaSprint
+              Payload:
+                Error:
+                  Type: Business
+                  Message: Not able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application
+                  ErrorCode: commonError-0006
       description: "## Overview\n\nThis is an interface exposed by CRM for Rebus Integration to update the Ported Out Staus of Terminated MSISDN received from Rebus MNP.\n\n## Interface Traceability \n\n| InterfaceId  | Execution Flow              |   \n|---|---                                     |\n|0.11.11.12.b |Rebus Integration (Porting Service) -> CRM [HTTPS REST]|\n\n## Exception Handling\n\nError codes for exception scenarios\n\n|  Error Code |Description   | Type  |\n|---|---|---|\n|commonError-0001|\tInternal Error from VIP while communicating with Data Raptor or Apex|\tTechnical|\n|commonError-0002|\tUnable to find Specified Data from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex|\tBusiness|\n|commonError-0003|\tMandatory Field Is Missing Or Empty Or Invalid from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty  Application  through Data Raptor or Apex [Authorization is Empty] |\tValidation|\n|commonError-0004|\tTimeout from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application through Data Raptor or Apex.[Timeout by DataRaptor]|Technical|\n|commonError-0005|\tData Processing Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application [Authorization is Invalid]|\tBusiness|\n|commonError-0006|\tNot able to process the request due to internal business logic Error from VIP Internal/External/Thirdparty Application while communicating with Internal/External/Thirdparty Application[DataRaptor call failed]|\tBusiness|\n"
       parameters:
         - in: header
@@ -15020,7 +15279,7 @@ paths:
             ## Scenarios:
 
             1. Scenario1: For all existing PAYG Customers the activity name will be "updatePortStatus" and Status field is not required.
-            2. Scenario2: For E & J customers the activity name "updatePortStatus_JoinViaSprint" and Status field is mandatory. MSISDN is not required for this case and is conditional mandatory.
+            2. Scenario2: For E & J customers the activity name "updatePortStatus_JoinViaSprint" ExternalReferenceId and Status field is mandatory. MSISDN is not required for this case and is conditional mandatory.
             3. Response of the Payload will have the same Activity name what has been defined in the request.
       operationId: updatePortStatus
       consumes:
