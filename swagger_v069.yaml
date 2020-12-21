@@ -8999,8 +8999,6 @@ paths:
                   GetCardToken:
                     type: object
                     description: Retrievded Card Token Details
-                    required:
-                      - Contact
                     properties:
                       Contact:
                         type: object
@@ -9034,7 +9032,7 @@ paths:
                                     description: Auto topup details
                                     properties:
                                       Amount:
-                                        type: integer
+                                        type: number
                                         description: Auto topup amount
                                       OTR:
                                         type: string
@@ -9050,12 +9048,6 @@ paths:
                                     items:
                                       type: object
                                       description: Payment Method details of Billing Account
-                                      required:
-                                        - Address
-                                        - CardHolderName
-                                        - CardType
-                                        - OnlineToken
-                                        - RegisteredCardType
                                       properties:
                                         Address:
                                           type: object
@@ -9134,6 +9126,12 @@ paths:
                                             - Recurring
                                         SchemeReferenceData:
                                           type: string
+                                      required:
+                                        - Address
+                                        - CardHolderName
+                                        - CardType
+                                        - OnlineToken
+                                        - RegisteredCardType
                               CustomerAccount:
                                 type: object
                                 description: Customer Account Details
@@ -9183,90 +9181,73 @@ paths:
                           Salutation:
                             type: string
                             description: Salutation for the Primary User
+                    required:
+                      - Contact
           examples:
-            Scenario1: |-
-              {
-                "Header": {
-                  "ActivityName": "getCardToken",
-                  "ActivityStatus": "Active",
-                  "ActivityStatusEnum": "SUCCESS",
-                  "CorrelationId": "001",
-                  "Destination": "Rebus Integration",
-                  "MessageId": 1585373441929,
-                  "MessageType": "RESPONSE",
-                  "Source": "CRM",
-                  "TimeStamp": "1965-06-14T02:42:54.369Z"
-                },
-                "Payload": {
-                  "GetCardToken": {
-                    "Contact": {
-                      "Account": {
-                        "BillingAccount": {
-                          "AccountNumber": "4001963792",
-                          "PaymentMethod": [
-                            {
-                              "Address": {
-                                "PostCode": "SL6 1GG",
-                                "AddressLine1": "Apartment 6, Marigold House",
-                                "BuildingName": "Star hose",
-                                "BuildingNumber": "105",
-                                "Province": "Berkshire"
-                              },
-                              "CardHolderName": "Novel Roy",
-                              "CardType": "Visa Credit",
-                              "OnlineToken": "420350bbbbbgzwf6345",
-                              "RegisteredCardType": "Adhoc",
-                              "ExpiryMonth": 11,
-                              "ExpiryYear": 2031,
-                              "MethodType": "Direct Debit",
-                              "SchemeReferenceData": "TESTSRD0001"
-                            },
-                            {
-                              "Address": {
-                                "PostCode": "SL6 1GG",
-                                "AddressLine1": "Apartment 16, Marigold House",
-                                "BuildingName": "Star house",
-                                "BuildingNumber": "115",
-                                "Province": "Berkshire"
-                              },
-                              "CardHolderName": "Amit Roy",
-                              "CardType": "Visa Credit",
-                              "OnlineToken": "420350bbbbbgzwf6345",
-                              "RegisteredCardType": "Adhoc",
-                              "ExpiryMonth": 11,
-                              "ExpiryYear": 2031,
-                              "MethodType": "Direct Debit",
-                              "SchemeReferenceData": "TESTSRD0002"
-                            }
-                          ],
-                          "AutoTopUpConfig": {
-                            "Amount": 27,
-                            "OTR": "I0000215843",
-                            "ProductCode": "OFF_TOPUPOFFER_27.5Pound",
-                            "ProductName": "TopUp Offer 27.5Pound"
-                          }
-                        },
-                        "CustomerAccount": {
-                          "AccountNumber": "4001963792",
-                          "Brand": "Three"
-                        },
-                        "Subscription": {
-                          "Asset": {
-                            "MSISDN": "proident exercitation ea"
-                          },
-                          "SubscriptionNumber": "1000007617"
-                        }
-                      },
-                      "ContactUniqueNumber": "1960148",
-                      "FirstName": "Sivasankar",
-                      "LastName": "Padwal",
-                      "UserEmail": "447303027319@getnada.com",
-                      "IsAgeVerified": false,
-                      "Salutation": "Mr"
-                    }
-                  }
-                }
-              }
+            Scenario1:
+              Header:
+                ActivityName: getCardToken
+                ActivityStatus: Active
+                ActivityStatusEnum: SUCCESS
+                CorrelationId: '001'
+                Destination: Rebus Integration
+                MessageId: 1585373441929
+                MessageType: RESPONSE
+                Source: CRM
+                TimeStamp: '1965-06-14T02:42:54.369Z'
+              Payload:
+                GetCardToken:
+                  Contact:
+                    Account:
+                      BillingAccount:
+                        AccountNumber: '4001963792'
+                        PaymentMethod:
+                          - Address:
+                              PostCode: SL6 1GG
+                              AddressLine1: 'Apartment 6, Marigold House'
+                              BuildingName: Star hose
+                              BuildingNumber: '105'
+                              Province: Berkshire
+                            CardHolderName: Novel Roy
+                            CardType: Visa Credit
+                            OnlineToken: 420350bbbbbgzwf6345
+                            RegisteredCardType: Adhoc
+                            ExpiryMonth: 11
+                            ExpiryYear: 2031
+                            MethodType: Direct Debit
+                            SchemeReferenceData: TESTSRD0001
+                          - Address:
+                              PostCode: SL6 1GG
+                              AddressLine1: 'Apartment 16, Marigold House'
+                              BuildingName: Star house
+                              BuildingNumber: '115'
+                              Province: Berkshire
+                            CardHolderName: Amit Roy
+                            CardType: Visa Credit
+                            OnlineToken: 420350bbbbbgzwf6345
+                            RegisteredCardType: Adhoc
+                            ExpiryMonth: 11
+                            ExpiryYear: 2031
+                            MethodType: Direct Debit
+                            SchemeReferenceData: TESTSRD0002
+                        AutoTopUpConfig:
+                          Amount: 27.1
+                          OTR: I0000215843
+                          ProductCode: OFF_TOPUPOFFER_27.5Pound
+                          ProductName: TopUp Offer 27.5Pound
+                      CustomerAccount:
+                        AccountNumber: '4001963792'
+                        Brand: Three
+                      Subscription:
+                        Asset:
+                          MSISDN: proident exercitation ea
+                        SubscriptionNumber: '1000007617'
+                    ContactUniqueNumber: '1960148'
+                    FirstName: Sivasankar
+                    LastName: Padwal
+                    UserEmail: 447303027319@getnada.com
+                    IsAgeVerified: false
+                    Salutation: Mr
             Scenario2:
               Header:
                 ActivityName: getCardToken
@@ -9348,7 +9329,7 @@ paths:
                             MethodType: Direct Debit
                             SchemeReferenceData: TESTSRD0002
                         AutoTopUpConfig:
-                          Amount: 27
+                          Amount: 27.1
                           OTR: I0000215843
                           ProductCode: OFF_TOPUPOFFER_27.5Pound
                           ProductName: TopUp Offer 27.5Pound
@@ -14162,6 +14143,9 @@ paths:
           description: Receipt though defined in interface still the design is not in place from Migration engine.
           x-examples:
             Scenario1: |2-
+
+
+
 
 
 
