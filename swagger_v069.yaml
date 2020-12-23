@@ -8689,7 +8689,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: "## Scenarios\n\nScenario1) Request with ActivityName 3DSNotificationIMEIToCRM\n\n1) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n2) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n3) For ScreenSize - API to provide the details.\n4) Service will make Subscription Start Date stamped with Header TimeStamp and \n5) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n6) Service will send the comms for first Device update against asset (example: Welcome comms etc).\n\t\n\t\nScenario2) Request with ActivityName ActivationNotificationToCRM\n\n1. All attributes in payload body for IMEI/Device will be ignored.\n2. Service will make Subscription Start Date stamped with Header TimeStamp and \n3. Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n4. Service will not send the comms (example: Welcome comms etc)..\n\nScenario3) Request with ActivityName 3DSNotificationIMEIToCRM (for E & J PortIn)\n1) Based on subscription chargetobill field, or paymentoption field or order type/subsubtype it will differentiate if PortIN information need to be provided or not.\n2) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n3) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n4) For ScreenSize - API to provide the details.\n5) Service will make Subscription Start Date stamped with Header TimeStamp and \n6) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’ but in this case already the Asset Status will be in Active State. \n7) Service will send the comms for first Device update against asset (example: Welcome comms etc) but there is seperate SendComms design inprogress for the Comms (Which may not reuse the existing Send Comms functionality)."
+          description: "## Scenarios\n\nScenario1) Request with ActivityName 3DSNotificationIMEIToCRM\n\n1) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n2) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n3) For ScreenSize - API to provide the details.\n4) Service will make Subscription Start Date stamped with Header TimeStamp and \n5) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n6) Service will send the comms for first Device update against asset (example: Welcome comms etc).\n\t\n\t\nScenario2) Request with ActivityName ActivationNotificationToCRM\n\n1. All attributes in payload body for IMEI/Device will be ignored.\n2. Service will make Subscription Start Date stamped with Header TimeStamp and \n3. Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’.\n4. Service will not send the comms (example: Welcome comms etc)..\n\nScenario3) Request with ActivityName 3DSNotificationIMEIToCRM (for E & J PortIn)\n1) Based on subscription chargetobill field, or paymentoption field or order type/subsubtype it will differentiate if PortIN information need to be provided or not.\n2) SerialNumber/Manufacturer/Model/LastUsed attributes are mandatory. If IMEI is not provided from 3DS then this should be derived from SerialNumber.\n3) For Model- Color, Memory & ScreenSize are optional, currently not being provided by 3DS so can be blank, EPC sources these are attributes.\n4) For ScreenSize - API to provide the details.\n5) Service will make Subscription Start Date stamped with Header TimeStamp and \n6) Service will only update the status of the Subscription and Asset status's to ‘Active’ if the status is ‘Preactive’ but in this case already the Asset Status will be in Active State. \n7) Service will send the comms for first Device update against asset (example: Welcome comms etc)."
           required: true
           schema:
             type: object
@@ -8882,7 +8882,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: "## Information\n1)\tActivityName Scnearios (Following are the different type of ActivityName’s to be passed for different scnearios): \n\ti) IVR Topup scenario – ActivityName = “Topup” \n\tii) OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Weekly AutoTopup” || “Date AutoTopup” || “Threshold AutoTopup” \n\tiii) OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Recurring Product AutoTopup”\n2)\tIf ActivityName is for OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber is mandatory\n3)\tIf ActivityName is for OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber and AssetID is mandatory to fetch specific Product information\n4) If ActivityName is Topup or any other scenario then MSISDN is mandatory\n5) Expired cards will not be fetched as part of response message.\n6) OTR will be generated as part of getCardToken API call.\n7) The Amount is send in response only for the requests, which have the AssetID along with SubscriptionNumber (for all other requests RI will get from OCS)\n\n# Scenarios\nRequest Scenarios\n1. Scenario1: Topup\n2. Scenario2: Recurring Product AutoTopup\n3. Scenario3: Weekly AutoTopup\n4. Scenario4: Threshold AutoTopup\n5. Scenario5: Date AutoTopup\n\nResponse Scenarios\n1. Scenario1: Generic Scenario Response\n2. Scenario2: No Active Card Present\n3. Scenario3: Active card Present"
+          description: "## Information\n1)\tActivityName Scnearios (Following are the different type of ActivityName’s to be passed for different scnearios): \n\ti) IVR Topup scenario – ActivityName = “Topup” \n\tii) OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Weekly AutoTopup” || “Date AutoTopup” || “Threshold AutoTopup” \n\tiii) OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)] – ActivityName = “Recurring Product AutoTopup”\n2)\tIf ActivityName is for OCS AutoTopup scenarios [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber is mandatory\n3)\tIf ActivityName is for OCS Recurring Product Activation [Rebus Integration (Matrixx Event Handler Service)], SubscriptionNumber and AssetID is mandatory to fetch specific Product information\n4) If ActivityName is Topup or any other scenario then MSISDN is mandatory\n5) Expired cards will not be fetched as part of response message.\n6) OTR will be generated as part of getCardToken API call.\n7) The Amount is send in response only for the requests, which have the AssetID along with SubscriptionNumber (for all other requests RI will get from OCS)\n\n# Scenarios\nRequest Scenarios\n1. Scenario1: Topup\n2. Scenario2: Recurring Product AutoTopup\n3. Scenario3: Weekly AutoTopup\n4. Scenario4: Threshold AutoTopup\n5. Scenario5: Date AutoTopup\n\nResponse Scenarios\n1. Scenario1: Generic Scenario Response\n2. Scenario2: No Active Card Present (The receipt will not be created for this)\n3. Scenario3: Active card Present (if its not recurring then respective clients will not do AutoTopup)"
           required: true
           schema:
             type: object
@@ -8909,23 +8909,18 @@ paths:
               - Header
               - Payload
           x-examples:
-            Scenario1: |-
-              {
-                "Header": {
-                  "ActivityName": "Topup",
-                  "CorrelationId": "001456566666",
-                  "Destination": "CRM",
-                  "MessageId": "1585374196555",
-                  "MessageType": "REQUEST",
-                  "Source": "IVR",
-                  "TimeStamp": "1960-10-21T03:50:02.350Z"
-                },
-                "Payload": {
-                  "CardToken": {
-                    "MSISDN": "447303027319"
-                  }
-                }
-              }
+            Scenario1:
+              Header:
+                ActivityName: Topup
+                CorrelationId: '001456566666'
+                Destination: CRM
+                MessageId: '1585374196555'
+                MessageType: REQUEST
+                Source: IVR
+                TimeStamp: '1960-10-21T03:50:02.350Z'
+              Payload:
+                CardToken:
+                  MSISDN: '447303027319'
             Scenario2:
               Header:
                 ActivityName: Recurring Product AutoTopup
@@ -8939,23 +8934,18 @@ paths:
                 CardToken:
                   AssetId: sdkjhk7634786
                   SubscriptionNumber: '1000007617'
-            Scenario3: |-
-              {
-                "Header": {
-                  "ActivityName": "Weekly AutoTopup",
-                  "CorrelationId": "00134545456456345",
-                  "Destination": "CRM",
-                  "MessageId": "1585374196555",
-                  "MessageType": "REQUEST",
-                  "Source": "Rebus Integration",
-                  "TimeStamp": "1960-10-21T03:50:02.350Z"
-                },
-                "Payload": {
-                  "CardToken": {
-                    "SubscriptionNumber": "1000007617"
-                  }
-                }
-              }
+            Scenario3:
+              Header:
+                ActivityName: Weekly AutoTopup
+                CorrelationId: '00134545456456345'
+                Destination: CRM
+                MessageId: '1585374196555'
+                MessageType: REQUEST
+                Source: Rebus Integration
+                TimeStamp: '1960-10-21T03:50:02.350Z'
+              Payload:
+                CardToken:
+                  SubscriptionNumber: '1000007617'
             Scenario4:
               Header:
                 ActivityName: Threshold AutoTopup
@@ -14143,6 +14133,10 @@ paths:
           description: Receipt though defined in interface still the design is not in place from Migration engine.
           x-examples:
             Scenario1: |2-
+
+
+
+
 
 
 
